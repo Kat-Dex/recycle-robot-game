@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci5bd4ndinkmc"]
+
+[ext_resource type="Script" path="res://bin scenes/general-waste-bin.gd" id="1_n1kyk"]
+[ext_resource type="Texture2D" uid="uid://1uacrlghx5ud" path="res://bins/general-waste-bin.png" id="1_s4ife"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekux6"]
+size = Vector2(365, 245)
+
+[node name="General Waste Bin" type="Area2D" groups=["bins_group"]]
+script = ExtResource("1_n1kyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_s4ife")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 27)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ekux6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 27)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ekux6")

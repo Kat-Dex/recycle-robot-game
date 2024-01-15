@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://43cchf84nfde"]
+
+[ext_resource type="Texture2D" uid="uid://pyjhd5i4hfvd" path="res://bins/paper-bin.png" id="1_no2eq"]
+[ext_resource type="Script" path="res://bin scenes/paper-bin.gd" id="1_opj6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sj4m"]
+size = Vector2(365, 245)
+
+[node name="Paper Bin" type="Area2D" groups=["bins_group"]]
+script = ExtResource("1_opj6p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_no2eq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 27)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_7sj4m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 27)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_7sj4m")
