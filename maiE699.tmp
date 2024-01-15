@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bye37l6v6dq25"]
+
+[ext_resource type="PackedScene" uid="uid://cs4gxuxedn6qs" path="res://player.tscn" id="1_02eli"]
+[ext_resource type="Script" path="res://main.gd" id="1_2je0k"]
+[ext_resource type="PackedScene" uid="uid://ckpuxwn4lowe3" path="res://bin scenes/plastic-bin.tscn" id="2_351oh"]
+[ext_resource type="PackedScene" uid="uid://43cchf84nfde" path="res://bin scenes/paper-bin.tscn" id="3_m4hec"]
+[ext_resource type="PackedScene" uid="uid://cp8mm20hh4l7e" path="res://bin scenes/glass-bin.tscn" id="4_7ihue"]
+[ext_resource type="PackedScene" uid="uid://ci5bd4ndinkmc" path="res://bin scenes/general-waste-bin.tscn" id="5_dr7jc"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_2je0k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.678431, 0.419608, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_02eli")]
+position = Vector2(697, 295)
+
+[node name="Plastic Bin" parent="." instance=ExtResource("2_351oh")]
+position = Vector2(448, 56)
+
+[node name="Paper Bin" parent="." instance=ExtResource("3_m4hec")]
+position = Vector2(176, 56)
+
+[node name="Glass Bin" parent="." instance=ExtResource("4_7ihue")]
+position = Vector2(720, 56)
+
+[node name="General Waste Bin" parent="." instance=ExtResource("5_dr7jc")]
+position = Vector2(984, 56)
