@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://boy8leb4ar5pi"]
+
+[ext_resource type="Script" path="res://trashScenes/milk_jug.gd" id="1_frq8e"]
+[ext_resource type="Texture2D" uid="uid://nv6kuqsum80h" path="res://trash/milk-jug.png" id="1_urjd0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v20vg"]
+size = Vector2(78, 110)
+
+[node name="Trash" type="Area2D"]
+script = ExtResource("1_frq8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_urjd0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v20vg")

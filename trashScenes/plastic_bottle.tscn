@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://n3r2ei26x55q"]
+
+[ext_resource type="Texture2D" uid="uid://bh0je6qfkaewc" path="res://trash/plastic-bottle.png" id="1_j2dfh"]
+[ext_resource type="Script" path="res://trashScenes/plastic_bottle.gd" id="1_vt676"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl8c2"]
+size = Vector2(30, 90)
+
+[node name="Trash" type="Area2D"]
+script = ExtResource("1_vt676")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_j2dfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hl8c2")

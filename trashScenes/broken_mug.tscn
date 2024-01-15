@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://8hvm06yg22em"]
+
+[ext_resource type="Texture2D" uid="uid://dgwnpx10dn761" path="res://trash/broken-mug.png" id="1_0bqch"]
+[ext_resource type="Script" path="res://trashScenes/broken_mug.gd" id="1_sbts4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sx7y"]
+size = Vector2(31, 27.5)
+
+[node name="Trash" type="Area2D"]
+script = ExtResource("1_sbts4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0bqch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_4sx7y")

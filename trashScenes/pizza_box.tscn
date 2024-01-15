@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1j661p673tmx"]
+
+[ext_resource type="Texture2D" uid="uid://qhnwevu32upk" path="res://trash/pizza-box.png" id="1_0ievh"]
+[ext_resource type="Script" path="res://trashScenes/pizza_box.gd" id="1_7ymk6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08mfq"]
+size = Vector2(120, 60)
+
+[node name="Trash" type="Area2D"]
+script = ExtResource("1_7ymk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0ievh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_08mfq")
